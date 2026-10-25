@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vault Dashboard | Vault Custodial Services</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0b0f19;
+      color: #ffffff;
+      margin: 0;
+      padding: 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1f2937;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+    .header h2 {
+      font-size: 18px;
+      margin: 0;
+      color: #9ca3af;
+    }
+    .logout-btn {
+      background-color: transparent;
+      border: 1px solid #1f2937;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .logout-btn:hover {
+      background-color: #1f2937;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .vault-info {
+      background-color: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .card {
+      background-color: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .card h3 {
+      color: #9ca3af;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    .balance {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h2>Vault Custodial Services</h2>
+      <a href="login.html" class="logout-btn">Log Out</a>
+    </div>
+
+    <div class="vault-info">
+      Authenticated Vault ID: <span id="activeVaultId" style="color: #ffffff; font-weight: 600;">CK-7792</span> &nbsp;|&nbsp; Status: <span style="color: #10b981;">Secured & Active</span>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Primary Portfolio</h3>
+        <p class="balance" id="primaryBalance">500 ETH</p>
+      </div>
+      <div class="card">
+        <h3>Secondary Portfolio</h3>
+        <p class="balance" id="secondaryBalance">42.7357201 ETH</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
