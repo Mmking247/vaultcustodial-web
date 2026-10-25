@@ -55,6 +55,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 20px;
+      margin-bottom: 30px;
     }
     .card {
       background-color: #111827;
@@ -73,8 +74,23 @@
     .balance {
       font-size: 32px;
       font-weight: 700;
-      margin: 0;
+      margin: 0 0 16px 0;
       color: #ffffff;
+    }
+    .withdraw-btn {
+      background-color: #10b981;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.2s;
+    }
+    .withdraw-btn:hover {
+      background-color: #059669;
     }
   </style>
 </head>
@@ -92,15 +108,18 @@
 
     <div class="card-grid">
       <div class="card">
-        <h3>Primary Portfolio</h3>
-        <p class="balance" id="primaryBalance">500 ETH</p>
-      </div>
-      <div class="card">
-        <h3>Secondary Portfolio</h3>
-        <p class="balance" id="secondaryBalance">42.7357201 ETH</p>
+        <h3>Ethereum Asset Holding</h3>
+        <p class="balance">500 ETH</p>
+        <button class="withdraw-btn" onclick="triggerWithdrawal()">Withdraw Funds</button>
       </div>
     </div>
   </div>
+
+  <script>
+    function triggerWithdrawal() {
+      alert("Notice: Early escrow transfer restricted under pre-launch contract structure[span_0](start_span)[span_0](end_span). Please check your secure messaging channel for node compliance clearance parameters[span_1](start_span)[span_1](end_span).");
+    }
+  </script>
 
 </body>
 </html>
