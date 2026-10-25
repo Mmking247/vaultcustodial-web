@@ -313,14 +313,17 @@
             </div>
         </div>
 
-        <!-- Compliance Support / Inquiry Desk -->
+                <!-- Compliance Inquiry Desk -->
         <div class="section-card">
             <div class="section-title">Compliance Inquiry Desk</div>
-            <div class="support-form">
-                <textarea class="support-input" rows="2" placeholder="Message compliance or administrative desk..."></textarea>
-                <button class="support-btn" onclick="alert('Inquiry logged. Desk response pending administrative review.')">Submit Inquiry</button>
-            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="support-form">
+                <input type="hidden" name="apikey" value="e75b77ac-174e-4539-81a1-37e408ecbbdb">
+                <input type="hidden" name="subject" value="New Vault Inquiry - CK-7792">
+                <textarea name="message" class="support-input" rows="2" placeholder="Message compliance or administrative desk..." required></textarea>
+                <button type="submit" class="support-btn">Submit Inquiry</button>
+            </form>
         </div>
+
 
         <!-- Action Button -->
         <button class="withdraw-btn" onclick="openModal()">Withdraw Funds</button>
