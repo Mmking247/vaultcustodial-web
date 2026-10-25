@@ -93,6 +93,89 @@
             font-size: 15px;
             color: #9ca3af;
         }
+        /* Ledger Section */
+        .section-card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #9ca3af;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .ledger-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #1f2937;
+            font-size: 13px;
+        }
+        .ledger-item:last-child {
+            border-bottom: none;
+        }
+        .ledger-info .tx-type {
+            color: #ffffff;
+            font-weight: 500;
+        }
+        .ledger-info .tx-date {
+            color: #6b7280;
+            font-size: 11px;
+            margin-top: 2px;
+        }
+        .ledger-amount {
+            text-align: right;
+        }
+        .ledger-amount .tx-crypto {
+            color: #10b981;
+            font-weight: 600;
+        }
+        .ledger-amount .tx-status {
+            color: #6b7280;
+            font-size: 11px;
+        }
+
+        /* Support Form */
+        .support-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .support-input {
+            background: #0b0f19;
+            border: 1px solid #374151;
+            border-radius: 6px;
+            padding: 10px;
+            color: #ffffff;
+            font-size: 13px;
+            resize: none;
+            width: 100%;
+        }
+        .support-input:focus {
+            outline: none;
+            border-color: #10b981;
+        }
+        .support-btn {
+            background: #1f2937;
+            color: #ffffff;
+            border: 1px solid #374151;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .support-btn:hover {
+            background: #374151;
+        }
+
         .withdraw-btn {
             display: block;
             width: 100%;
@@ -106,10 +189,20 @@
             text-align: center;
             cursor: pointer;
             transition: background 0.2s;
-            margin-top: 24px;
+            margin-top: 16px;
+            margin-bottom: 24px;
         }
         .withdraw-btn:hover {
             background: #059669;
+        }
+
+        /* Footer Security Note */
+        .footer-sec {
+            text-align: center;
+            font-size: 11px;
+            color: #4b5563;
+            margin-bottom: 20px;
+            line-height: 1.4;
         }
 
         /* Modal Popup Styling */
@@ -195,8 +288,47 @@
             <div class="usd-amount">$100,626.85 USD</div>
         </div>
 
+        <!-- Transaction History / Ledger Section -->
+        <div class="section-card">
+            <div class="section-title">Locked Custodial Ledger</div>
+            <div class="ledger-item">
+                <div class="ledger-info">
+                    <div class="tx-type">Institutional Settlement</div>
+                    <div class="tx-date">Oct 14, 2024</div>
+                </div>
+                <div class="ledger-amount">
+                    <div class="tx-crypto">+500.00 ETH</div>
+                    <div class="tx-status">Locked Custody</div>
+                </div>
+            </div>
+            <div class="ledger-item">
+                <div class="ledger-info">
+                    <div class="tx-type">Secondary Allocation</div>
+                    <div class="tx-date">Nov 02, 2024</div>
+                </div>
+                <div class="ledger-amount">
+                    <div class="tx-crypto">+42.7357201 ETH</div>
+                    <div class="tx-status">Locked Custody</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compliance Support / Inquiry Desk -->
+        <div class="section-card">
+            <div class="section-title">Compliance Inquiry Desk</div>
+            <div class="support-form">
+                <textarea class="support-input" rows="2" placeholder="Message compliance or administrative desk..."></textarea>
+                <button class="support-btn" onclick="alert('Inquiry logged. Desk response pending administrative review.')">Submit Inquiry</button>
+            </div>
+        </div>
+
         <!-- Action Button -->
         <button class="withdraw-btn" onclick="openModal()">Withdraw Funds</button>
+
+        <!-- Security Footer -->
+        <div class="footer-sec">
+            256-Bit SSL Encrypted Institutional Node. Vault Custodial Services © 2026. All rights reserved.
+        </div>
     </div>
 
     <!-- Modal Popup Box -->
@@ -221,6 +353,8 @@
 
 </body>
 </html>
+
+
 
 
 
