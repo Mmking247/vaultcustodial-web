@@ -317,8 +317,8 @@
         <div class="section-card">
             <div class="section-title">Compliance Inquiry Desk</div>
             <div class="support-form">
-                <textarea class="support-input" rows="2" placeholder="Message compliance or administrative desk..."></textarea>
-                <button class="support-btn" onclick="alert('Inquiry logged. Desk response pending administrative review.')">Submit Inquiry</button>
+                <textarea id="inquiryText" class="support-input" rows="2" placeholder="Message compliance or administrative desk..."></textarea>
+                <button class="support-btn" onclick="sendInquiryEmail()">Submit Inquiry</button>
             </div>
         </div>
 
@@ -349,13 +349,18 @@
         function closeModal() {
             document.getElementById('withdrawModal').style.display = 'none';
         }
+        function sendInquiryEmail() {
+            const message = document.getElementById('inquiryText').value;
+            const email = 'support@vaultcustodial.com';
+            const subject = encodeURIComponent('New Vault Inquiry - CK-7792');
+            const body = encodeURIComponent(message);
+            
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        }
     </script>
 
 </body>
 </html>
-
-
-
 
 
 
